@@ -1,4 +1,5 @@
 #!/bin/bash
+appname="test-service.jar"
 JAVA_OPTS="\
 -server \
 -Xmx512m \
@@ -14,5 +15,5 @@ JAVA_OPTS="\
 -XX:+PrintGCDetails \
 -XX:+PrintGCTimeStamps \
 -Xloggc:gc.log"
-echo Starting eureka.jar 
-java ${JAVA_OPTS} -jar eureka.jar &
+echo Starting ${appname} 
+java ${JAVA_OPTS} -jar ${appname} &
